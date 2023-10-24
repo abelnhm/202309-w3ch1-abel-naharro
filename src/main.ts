@@ -10,9 +10,10 @@ console.log(characters);
 let contentHTML = '<ul class="characters-list row list-unstyled">';
 
 for (const iterator of characters) {
+  let imgProfile = iterator.name;
   contentHTML += `<li class="character col">
         <div class="card character__card">
-          <img src="img/${iterator.name}.jpg" alt="Nombre y familia del personaje" class="character__picture card-img-top" />
+          <img src="img/${imgProfile.toLocaleLowerCase()}.jpg" alt="Nombre y familia del personaje" class="character__picture card-img-top" />
           <div class="card-body">
             <h2 class="character__name card-title h4"> ${iterator.name} </h2>
             <div class="character__info">
